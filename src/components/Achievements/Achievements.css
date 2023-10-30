@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans&family=PT+Sans&family=PT+Serif:wght@700&family=Rubik:wght@300&display=swap');
+.bv2{
+
+    background-image: linear-gradient(black,#040D12);
+    height: max-content;
+    color: white;
+    overflow-x: hidden;
+    
+}
+
+.be1{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 34px;
+    font-family: 'PT Sans', sans-serif;
+    color: wheat;
+    
+}
+
+.ach1{
+    width: 100vx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.chi1{
+    margin: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.imgconi{
+    width: 35vw;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
+}
+.imgconi img{
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    
+}
+
+
+.bhav1{
+    margin: 20px;
+    width: 50%;
+    height: 100%;
+    padding: 35px;
+
+
+
+}
+
+.tex1{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.tex2{
+    width: 100%;
+    /* margin-left: 105px; */
+    font-size: 70px;
+    font-family: 'PT Serif', serif;
+}
+
+.bf1 {
+    width: 400vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  

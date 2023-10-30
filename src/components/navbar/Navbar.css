@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+    font-family: 'Rubik', sans-serif; 
+}
+
+.logo{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 130px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0;
+}
+
+.con {
+    width: 120px;
+    height: 50px;
+    background-image: url('../../assets/images/kjsit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    
+}
+
+.lin1 {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-right: 40px;
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    opacity: 0;
+
+}
+
+.lin1 li {
+    /* margin-left: 25px; */
+    margin-top: 25px;
+    padding: 25px;
+    
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    color: aliceblue;
+
+}
+
+.lin1 li:last-child {
+    margin-right: 0;
+}
