@@ -6,6 +6,8 @@
     background-color: transparent;
     align-items: center;
     font-family: 'Rubik', sans-serif; 
+    overflow: hidden;
+
 }
 
 .logo{
@@ -20,6 +22,8 @@
     border-radius: 15px;
     background-color: white;
     opacity: 0;
+    overflow: hidden;
+
 }
 
 .con {
@@ -41,6 +45,8 @@
     padding: 0;
     color: aliceblue;
     opacity: 0;
+    overflow: hidden;
+
 
 }
 

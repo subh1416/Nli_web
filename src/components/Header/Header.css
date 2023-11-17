@@ -1,0 +1,11 @@
+.be1{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    font-size: 34px;
+    font-family: 'PT Sans', sans-serif;
+    color: wheat;
+    
+}

@@ -39,6 +39,7 @@ export default function Navbar() {
         <ul className="lin1" ref={el => {textani=el}}>
           <li>Alumni</li>
           <li>Testimonials</li>
+          <li>Domains</li>
         </ul>
       </div>
     </div>

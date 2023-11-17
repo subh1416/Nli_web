@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@twistezo/react-text-scramble": "^1.0.6",
+    "codyframe": "^4.0.8",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "react": "^18.2.0",

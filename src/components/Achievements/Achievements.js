@@ -3,6 +3,7 @@ import "./Achievements.css";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Header from "../Header/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,9 +31,7 @@ export default function Achievements() {
   return (
     <div className="bv2" ref={component}>
 
-      <div className="be1">
-        <span>Achievement</span>
-      </div>
+  <Header title="Achievements"/>
 
       <div className="bf1" ref={slider}>
         <div className="panel red">

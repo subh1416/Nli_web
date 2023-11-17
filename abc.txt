@@ -1,37 +1,58 @@
-    transition={{
-          ease: "linear",
-          duration: 1,
-          delay: 0.5,
-        }}
-        variants={{
-          hidden: { opacity: 0, x: 90 },
-          visible: { opacity: 1, x: 0 },
-        }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={false}
+var StackCards = function(element) {
+  this.element = element;
+  this.items = this.element.getElementsByClassName('js-stack-cards__item');
+  this.scrollingListener = false;
+  this.scrolling = false;
+  initStackCardsEffect(this);
+};
 
+function initStackCardsEffect(element) {
+  var observer = new IntersectionObserver(stackCardsCallback.bind(element));
+  observer.observe(element.element);
+  };
 
-        <div className="ach1">
-            <div className="chi1">
-              <div className="imgconi">
-                <img
-                  src="https://preview.redd.it/8fgs49trdm761.jpg?width=640&crop=smart&auto=webp&s=e6d7e8b3e5372d8888f36092f8ac1804d8e7cf65"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="bhav1">
-              <div className="tex1">
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                  quidem illo natus eaque voluptatibus sequi impedit error nulla
-                  asperiores accusantium! Explicabo omnis soluta vel dicta.
-                  Debitis facere iste laborum. Nesciunt!
-                </span>
-              </div>
-              <div className="tex2">
-                <span>Touch the Moon</span>
-              </div>
-            </div>
-          </div>
+  function stackCardsCallback(entries) { // Intersection Observer callback
+  if(entries[0].isIntersecting) { // cards inside viewport - add scroll listener
+    if(this.scrollingListener) return; // listener for scroll event already added
+    stackCardsInitEvent(this);
+  } else { // cards not inside viewport - remove scroll listener
+    if(!this.scrollingListener) return; // listener for scroll event already removed
+    window.removeEventListener('scroll', this.scrollingListener);
+    this.scrollingListener = false;
+  }
+};
+ 
+function stackCardsInitEvent(element) {
+  element.scrollingListener = stackCardsScrolling.bind(element);
+  window.addEventListener('scroll', element.scrollingListener);
+};
+ 
+function stackCardsScrolling() {
+  if(this.scrolling) return;
+  this.scrolling = true;
+  window.requestAnimationFrame(animateStackCards.bind(this));
+};
+
+function animateStackCards() {
+  var top = this.element.getBoundingClientRect().top;
+  
+  for(var i = 0; i < this.items.length; i++) {
+  // cardTop/cardHeight/marginY are the css values for the card top position/height/Y offset
+    var scrolling = this.cardTop - top - i*(this.cardHeight+this.marginY);
+    if(scrolling > 0) { // card is fixed - we can scale it down
+    this.items[i].setAttribute('style', 'transform: translateY('+this.marginY*i+'px) scale('+(this.cardHeight - scrolling*0.05)/this.cardHeight+');');
+    }
+  }
+ 
+  this.scrolling = false;
+};
+
+var stackCards = document.getElementsByClassName('js-stack-cards'),
+  intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype),
+  reducedMotion = Util.osHasReducedMotion();
+  
+if(stackCards.length > 0 && intersectionObserverSupported && !reducedMotion) { 
+  for(var i = 0; i < stackCards.length; i++) {
+    new StackCards(stackCards[i]);
+  }
+}

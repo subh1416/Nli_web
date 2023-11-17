@@ -1,0 +1,44 @@
+.praise{
+    background-image: linear-gradient(#4D4C7D,#040D12);
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+
+.bigt{
+    width: 80%;
+    display: block;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+    text-align: center;
+}
+
+.t1m{
+    
+    margin-top: 50px;
+    font-size: 60px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bolder;
+
+
+}
+
+.t2m{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+}
+
+.t2m span{
+    max-width: 42.2rem;
+    font-size: 30px;
+    color: #9BBEC8;
+    font-family: 'PT Sans', sans-serif;
+}

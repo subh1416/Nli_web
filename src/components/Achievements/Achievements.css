@@ -5,28 +5,24 @@
     background-image: linear-gradient(black,#040D12);
     height: max-content;
     color: white;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    
     
 }
 
-.be1{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    font-size: 34px;
-    font-family: 'PT Sans', sans-serif;
-    color: wheat;
-    
+.bf1{
+    overflow: hidden;
+
 }
+
 
 .ach1{
-    width: 100vx;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -88,11 +84,14 @@
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
   }
 
 .panel {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+
   }
 
   
